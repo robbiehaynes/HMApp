@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Hilton Meals</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <img class="img-logo" src="img/hiltonlogo.jpg" alt="Hilton College Logo">
+    <h3>Hilton Meals</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Hi there!</h3>
+    <p id="user_para">Welcome to Hilton Meals. You're currently logged in.</p>
+    <h3>Date</h3>
+    <input type="text" id="date_textField" placeholder="Date here">
+    <h3>Breakfast</h3>
+    <input type="text" id="breakfast_textField" placeholder="Breakfast here">
+    <h3>Tea</h3>
+    <input type="text" id="tea_textField" placeholder="Tea here">
+    <h3>Lunch</h3>
+    <input type="text" id="lunch_textField" placeholder="Lunch here">
+    <h3>Dinner</h3>
+    <input type="text" id="dinner_textField" placeholder="Dinner here">
+    <button onclick="updateMeals()" id="update">Update Meals</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA3a2WUyFhTbglrDuY-ZOZeJLtv2uo7hPo",
+      authDomain: "hilton-meals-app-be221.firebaseapp.com",
+      databaseURL: "https://hilton-meals-app-be221.firebaseio.com",
+      projectId: "hilton-meals-app-be221",
+      storageBucket: "hilton-meals-app-be221.appspot.com",
+      messagingSenderId: "457602603730"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
